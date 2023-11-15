@@ -3,7 +3,8 @@
 using namespace std;
 
 // construtor
-Pessoa::Pessoa(string nome, string cpf, string dataNascimento, string genero, string rua, int numero, string bairro, string cidade, string cep) {
+Pessoa::Pessoa(string nome, string cpf, string dataNascimento, string genero,
+               string rua, int numero, string bairro, string cidade, string cep) {
   this->nome = nome;
   this->cpf = cpf;
   this->dataNacimento = dataNacimento;
@@ -14,32 +15,33 @@ Pessoa::Pessoa(string nome, string cpf, string dataNascimento, string genero, st
 string Pessoa::getNome() {
   return this->nome;
 }
-string Pessoa::getCpf(){
+string Pessoa::getCpf() {
   return this->cpf;
 }
-string Pessoa::getDataNacimento(){
+string Pessoa::getDataNacimento() {
   return this->dataNacimento;
 }
-string Pessoa::getGenero(){
+string Pessoa::getGenero() {
   return this->genero;
 }
-Endereco Pessoa::getEndereco(){
+Endereco Pessoa::getEndereco() {
   return *this->endereco;
 }
 
-void Pessoa::setNome(string nome){
+void Pessoa::setNome(string nome) {
   this->nome = nome;
 }
-void Pessoa::setCpf(string cpf){
+void Pessoa::setCpf(string cpf) {
   this->cpf = cpf;
 }
-void Pessoa::setDataNacimento(string dataNacimento){
+void Pessoa::setDataNacimento(string dataNacimento) {
   this->dataNacimento = dataNacimento;
 }
-void Pessoa::setGenero(string genero){
+void Pessoa::setGenero(string genero) {
   this->genero = genero;
 }
-void Pessoa::setEndereco(string rua, int numero, string bairro, string cidade, string cep){
+void Pessoa::setEndereco(string rua, int numero, string bairro, string cidade,
+                         string cep) {
   this->endereco->setRua(rua);
   this->endereco->setNumero(numero);
   this->endereco->setBairro(bairro);

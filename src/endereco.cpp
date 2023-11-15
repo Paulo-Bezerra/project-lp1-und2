@@ -3,7 +3,8 @@
 using namespace std;
 
 // construtor
-Endereco::Endereco(string rua, int numero, string bairro, string cidade, string cep) {
+Endereco::Endereco(string rua, int numero, string bairro, string cidade,
+                   string cep) {
   this->rua = rua;
   this->numero = numero;
   this->bairro = bairro;
