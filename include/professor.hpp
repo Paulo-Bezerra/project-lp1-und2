@@ -1,6 +1,7 @@
 #ifndef PROFESSOR_HPP
 #define PROFESSOR_HPP
 
+#include <iostream>
 #include "pessoa.hpp"
 #include "funcionario.hpp"
 
