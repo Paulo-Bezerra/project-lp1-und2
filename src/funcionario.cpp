@@ -1,8 +1,13 @@
 #include "../include/funcionario.hpp"
 
 using namespace std;
-  
+
 Funcionario::Funcionario(string matricula, float salario, string departamento, int cargaHoraria, string dataIngresso) {
+  this->matricula = matricula;
+  this->salario = salario;
+  this->departamento = departamento;
+  this->cargaHoraria = cargaHoraria;
+  this->dataIngresso = dataIngresso;
 }
 
 string Funcionario::getMatricula() {

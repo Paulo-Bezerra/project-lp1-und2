@@ -5,7 +5,6 @@
 
 class Funcionario {
 private:
-private:
   std::string matricula;
   float salario;
   std::string departamento;
@@ -13,7 +12,7 @@ private:
   std::string dataIngresso;
 public:
   Funcionario(std::string, float, std::string, int, std::string);
-  
+
   std::string getMatricula();
   float getSalario();
   std::string getDepartamento();
