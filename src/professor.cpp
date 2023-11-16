@@ -1,5 +1,4 @@
 #include "../include/professor.hpp"
-#include "professor.hpp"
 
 using namespace std;
 

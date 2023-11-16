@@ -15,6 +15,7 @@ private:
   };
   Formacao formacaoProfessor = GRADUACAO;
   Nivel nivelProfessor = I;
+  
 public:
   Professor(int formacaoProfessor, int nivelProfessor,
             std::string nome, std::string cpf, std::string dataNascimento, std::string genero,

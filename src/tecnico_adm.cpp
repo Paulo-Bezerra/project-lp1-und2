@@ -1,5 +1,4 @@
 #include "../include/tecnico_adm.hpp"
-#include "tecnico_adm.hpp"
 
 using namespace std;
 
