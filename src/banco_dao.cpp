@@ -3,6 +3,8 @@
 
 using namespace std;
 
+BancoDAO::BancoDAO(){}
+
 void BancoDAO::cadastrarProfessor(Professor professor) {
   professores.push_back(professor);
 }

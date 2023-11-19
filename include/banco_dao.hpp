@@ -11,6 +11,7 @@ private:
   std::vector<TecnicoAdm> tecnicosAdm;
 
 public:
+  BancoDAO();
 
   void cadastrarProfessor(Professor professor);
 
