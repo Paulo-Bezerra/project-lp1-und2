@@ -14,6 +14,7 @@ private:
 public:
   // declaração do construtor
   Endereco(std::string, int, std::string, std::string, std::string);
+  Endereco();
   // declarações dos métodos get
   std::string getRua();
   int getNumero();

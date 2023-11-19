@@ -15,17 +15,18 @@ private:
   };
   Formacao formacaoProfessor = GRADUACAO;
   Nivel nivelProfessor = I;
-  
+
 public:
   Professor(int formacaoProfessor, int nivelProfessor,
             std::string nome, std::string cpf, std::string dataNascimento, std::string genero,
             std::string rua, int numero, std::string bairro, std::string cidade, std::string cep,
             std::string matricula, float salario, std::string departamento, int cargaHoraria, std::string dataIngresso);
+  Professor();
 
   int getFormacaoProfessor();
   int getNivelProfessor();
 
-  void getFormacaoProfessor(int formacaoProfessor);
+  void setFormacaoProfessor(int formacaoProfessor);
   void setNivelProfessor(int nivelProfessor);
 };
 

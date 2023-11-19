@@ -10,6 +10,7 @@ Endereco::Endereco(string rua, int numero, string bairro, string cidade, string 
   this->cidade = cidade;
   this->cep = cep;
 }
+Endereco::Endereco(){}
 
 // declarações dos métodos get
 string Endereco::getRua() {

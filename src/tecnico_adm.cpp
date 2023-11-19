@@ -12,6 +12,8 @@ TecnicoAdm::TecnicoAdm(std::string funcaoDesempenhada,
   this->funcaoDesempenhada = funcaoDesempenhada;
 }
 
+TecnicoAdm::TecnicoAdm(){}
+
 float TecnicoAdm::getAdicionalProdutividade() {
   return this->adicionalProdutividade;
 }

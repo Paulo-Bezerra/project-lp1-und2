@@ -9,11 +9,10 @@ Professor::Professor(int formacaoProfessor, int nivelProfessor,
   Pessoa(nome, cpf, dataNascimento, genero, rua, numero, bairro, cidade, cep),
   Funcionario(matricula, salario, departamento, cargaHoraria, dataIngresso) {
 
-  Professor::getFormacaoProfessor(formacaoProfessor);
+  Professor::setFormacaoProfessor(formacaoProfessor);
 
   Professor::setNivelProfessor(nivelProfessor);
 }
-
 
 int Professor::getFormacaoProfessor() {
   return this->formacaoProfessor;
@@ -22,7 +21,7 @@ int Professor::getNivelProfessor() {
   return this->nivelProfessor;
 }
 
-void Professor::getFormacaoProfessor(int formacaoProfessor) {
+void Professor::setFormacaoProfessor(int formacaoProfessor) {
   if (formacaoProfessor == 1) {
     this->formacaoProfessor = GRADUACAO;
   } else if (formacaoProfessor == 2) {

@@ -10,11 +10,12 @@ private:
   std::string cpf;
   std::string dataNacimento;
   std::string genero;
-  Endereco* endereco;
+  Endereco endereco;
 
 public:
   Pessoa(std::string, std::string, std::string, std::string, std::string, int,
          std::string, std::string, std::string);
+  ~Pessoa();
   std::string getNome();
   std::string getCpf();
   std::string getDataNacimento();
