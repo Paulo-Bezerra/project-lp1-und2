@@ -3,24 +3,12 @@
 
 using namespace std;
 
-void BancoDAO::cadastrarProfessor(int formacaoProfessor, int nivelProfessor,
-                                  string nome, string cpf, string dataNascimento, string genero,
-                                  string rua, int numero, string bairro, string cidade, string cep,
-                                  string matricula, float salario, string departamento, int cargaHoraria, string dataIngresso) {
-
-  Professor buffer(formacaoProfessor, nivelProfessor, nome, cpf, dataNascimento, genero, rua, numero, bairro, cidade, cep, matricula, salario, departamento, cargaHoraria, dataIngresso);
-
-  professores.push_back(buffer);
+void BancoDAO::cadastrarProfessor(Professor professor) {
+  professores.push_back(professor);
 }
 
-void BancoDAO::cadastrarTecnicoAdm(string funcaoDesempenhada,
-                                   string nome, string cpf, string dataNascimento, string genero,
-                                   string rua, int numero, string bairro, string cidade, string cep,
-                                   string matricula, float salario, string departamento, int cargaHoraria, string dataIngresso) {
-
-  TecnicoAdm buffer(funcaoDesempenhada, nome, cpf, dataNascimento, genero, rua, numero, bairro, cidade, cep, matricula, salario, departamento, cargaHoraria, dataIngresso);
-
-  tecnicosAdm.push_back(buffer);
+void BancoDAO::cadastrarTecnicoAdm(TecnicoAdm tecnicoAdm) {
+  tecnicosAdm.push_back(tecnicoAdm);
 }
 
 void BancoDAO::listarProfessores() {

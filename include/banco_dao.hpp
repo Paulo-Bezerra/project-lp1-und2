@@ -12,15 +12,9 @@ private:
 
 public:
 
-  void cadastrarProfessor(int formacaoProfessor, int nivelProfessor,
-                          std::string nome, std::string cpf, std::string dataNascimento, std::string genero,
-                          std::string rua, int numero, std::string bairro, std::string cidade, std::string cep,
-                          std::string matricula, float salario, std::string departamento, int cargaHoraria, std::string dataIngresso);
+  void cadastrarProfessor(Professor professor);
 
-  void cadastrarTecnicoAdm(std::string funcaoDesempenhada,
-                           std::string nome, std::string cpf, std::string dataNascimento, std::string genero,
-                           std::string rua, int numero, std::string bairro, std::string cidade, std::string cep,
-                           std::string matricula, float salario, std::string departamento, int cargaHoraria, std::string dataIngresso);
+  void cadastrarTecnicoAdm(TecnicoAdm tecnicoAdm);
 
   void listarProfessores();
 
