@@ -8,25 +8,25 @@ class Pessoa {
 private:
   std::string nome;
   std::string cpf;
-  std::string dataNacimento;
+  std::string dataNascimento;
   std::string genero;
   Endereco endereco;
 
 public:
-  Pessoa(std::string, std::string, std::string, std::string, std::string, int,
-         std::string, std::string, std::string);
-  ~Pessoa();
+  Pessoa(std::string nome, std::string cpf, std::string dataNascimento, std::string genero, Endereco endereco);
+  Pessoa();
+
   std::string getNome();
   std::string getCpf();
-  std::string getDataNacimento();
+  std::string getDataNascimento();
   std::string getGenero();
   Endereco getEndereco();
 
-  void setNome(std::string);
-  void setCpf(std::string);
-  void setDataNacimento(std::string);
-  void setGenero(std::string);
-  void setEndereco(std::string, int, std::string, std::string, std::string);
+  void setNome(std::string nome);
+  void setCpf(std::string cpf);
+  void setDataNascimento(std::string dataNascimento);
+  void setGenero(std::string genero);
+  void setEndereco(std::string rua, int numero, std::string bairro, std::string cidade, std::string cep);
 };
 
 #endif

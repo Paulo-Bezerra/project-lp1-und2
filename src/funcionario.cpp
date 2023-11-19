@@ -9,6 +9,7 @@ Funcionario::Funcionario(string matricula, float salario, string departamento, i
   this->cargaHoraria = cargaHoraria;
   this->dataIngresso = dataIngresso;
 }
+Funcionario::Funcionario(){}
 
 string Funcionario::getMatricula() {
   return this->matricula;

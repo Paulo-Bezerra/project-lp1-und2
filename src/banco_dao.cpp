@@ -27,7 +27,7 @@ void BancoDAO::listarProfessores() {
   cout << "professores cadastrados:" << endl << endl;
   cout << "================================================================================" << endl;
   for (Professor p : professores) {
-    cout << "nome: " << p.getNome() << ", cpf: " << p.getCpf() << p.getDataNacimento() << p.getGenero() << endl
+    cout << "nome: " << p.getNome() << ", cpf: " << p.getCpf() << p.getDataNascimento() << p.getGenero() << endl
       << "rua: " << p.getEndereco().getRua() << ", endereço: " << p.getEndereco().getNumero() << ", bairro: " << p.getEndereco().getBairro() << ", cidade: " << p.getEndereco().getCidade() << ", cep: " << p.getEndereco().getCep() << endl
       << "formação: " << p.getFormacaoProfessor() << ", nível: " << p.getNivelProfessor() << endl;
     cout << "--------------------------------------------------------------------------------" << endl;
@@ -38,7 +38,7 @@ void BancoDAO::listarTecnicosAdm() {
   cout << "tecnicos administrativos cadastrados:" << endl << endl;
   cout << "================================================================================" << endl;
   for (TecnicoAdm t : tecnicosAdm) {
-    cout << "nome: " << t.getNome() << ", cpf: " << t.getCpf() << t.getDataNacimento() << t.getGenero() << endl
+    cout << "nome: " << t.getNome() << ", cpf: " << t.getCpf() << t.getDataNascimento() << t.getGenero() << endl
       << "rua: " << t.getEndereco().getRua() << ", endereço: " << t.getEndereco().getNumero() << ", bairro: " << t.getEndereco().getBairro() << ", cidade: " << t.getEndereco().getCidade() << ", cep: " << t.getEndereco().getCep() << endl
       << "funcao desempenhada: " << t.getFuncaoDesempenhada() << ", adcional de profutividade: " << t.getAdicionalProdutividade() << endl;
     cout << "--------------------------------------------------------------------------------" << endl;

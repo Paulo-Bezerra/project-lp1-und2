@@ -11,19 +11,20 @@ private:
   int cargaHoraria;
   std::string dataIngresso;
 public:
-  Funcionario(std::string, float, std::string, int, std::string);
-
+  Funcionario(std::string matricula, float salario, std::string departamento, int cargaHoraria, std::string dataIngresso);
+  Funcionario();
+  
   std::string getMatricula();
   float getSalario();
   std::string getDepartamento();
   int getCargaHoraria();
   std::string getDataIngresso();
 
-  void setMatricula(std::string);
-  void setSalario(float);
-  void setDepartamento(std::string);
-  void setCargaHoraria(int);
-  void setDataIngresso(std::string);
+  void setMatricula(std::string matricula);
+  void setSalario(float salario);
+  void setDepartamento(std::string departamento);
+  void setCargaHoraria(int cargaHoraria);
+  void setDataIngresso(std::string dataIngresso);
 };
 
 #endif

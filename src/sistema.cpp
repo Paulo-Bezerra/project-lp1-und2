@@ -1,19 +1,20 @@
 #include "../include/sistema.hpp"
 #include "../include/menu.hpp"
-#include "../include/professor.hpp"
-#include "../include/tecnico_adm.hpp"
+#include "../include/banco_dao.hpp"
+
 
 
 using namespace std;
 
 void execucao(BancoDAO dados) {
-  
+  Professor p;
+  TecnicoAdm t;
   int opcao = -1;
+
   do {
     opcao = menuPrincipal();
     switch (opcao) {
     case 1:
-      void menuCadastrarProfessor();
 
     }
   } while (opcao != 0);
