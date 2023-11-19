@@ -2,13 +2,22 @@
 
 using namespace std;
 
-TecnicoAdm::TecnicoAdm(std::string funcaoDesempenhada,
-                       string nome, string cpf, string dataNascimento, string genero,
-                       string rua, int numero, string bairro, string cidade, string cep,
-                       string matricula, float salario, string departamento, int cargaHoraria, string dataIngresso) :
-  Pessoa(nome, cpf, dataNascimento, genero, rua, numero, bairro, cidade, cep),
-  Funcionario(matricula, salario, departamento, cargaHoraria, dataIngresso) {
-
+TecnicoAdm::TecnicoAdm(Pessoa pessoa, Funcionario funcionario, std::string funcaoDesempenhada) {
+  // herança de pessoa
+  this->setNome(pessoa.getNome());
+  this->setCpf(pessoa.getCpf());
+  this->setDataNascimento(pessoa.getDataNascimento());
+  this->setGenero(pessoa.getGenero());
+  // endereço
+  this->setEndereco(pessoa.getEndereco().getRua(), pessoa.getEndereco().getNumero(), pessoa.getEndereco().getBairro(),
+                    pessoa.getEndereco().getCidade(), pessoa.getEndereco().getCep());
+  // herança de funcionario
+  this->setMatricula(funcionario.getMatricula());
+  this->setSalario(funcionario.getSalario());
+  this->setDepartamento(funcionario.getDepartamento());
+  this->setCargaHoraria(funcionario.getCargaHoraria());
+  this->setDataIngresso(funcionario.getDataIngresso());
+  // atribuição ao tecnico(a) administrativo
   this->funcaoDesempenhada = funcaoDesempenhada;
 }
 
