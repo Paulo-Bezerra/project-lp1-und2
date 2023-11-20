@@ -32,10 +32,12 @@ void execucao() {
       cout << "Informe a matrícula do(a) professor(a) a ser deletado(a): ";
       cin >> matricula;
       dados.deletarProfessor(matricula);
+      break;
     case 6:
       cout << "Informe a matrícula do(a) técnico(a) a ser deletado(a): ";
       cin >> matricula;
       dados.deletarProfessor(matricula);
+      break;
     case 7:
       cout << "Informe a matrícula do(a) professor(a) que deseja buscar: ";
       cin >> matricula;
@@ -47,8 +49,9 @@ void execucao() {
       cout << "Dados do(a) professor(a):" << endl << endl;
       cout << "================================================================================" << endl;
     cout
-      << "Nome: " << p.getNome() << ", cpf: " << p.getCpf() << ", data de nascimento: " << p.getDataNascimento() << ", genero: " << p.getGenero() << endl
+      << "Nome: " << p.getNome() << ", CPF: " << p.getCpf() << ", data de nascimento: " << p.getDataNascimento() << ", genero: " << p.getGenero() << endl
       << "Rua: " << p.getEndereco().getRua() << ", endereço: " << p.getEndereco().getNumero() << ", bairro: " << p.getEndereco().getBairro() << ", cidade: " << p.getEndereco().getCidade() << ", CEP: " << p.getEndereco().getCep() << endl
+      << "Matrícula: " << p.getMatricula() << ", salário: " << p.getSalario() << ", departamento: " << p.getDepartamento() << ", carga horaria: " << p.getCargaHoraria() << ", data de ingresso: " << p.getDataIngresso() << endl
       << "Formação: " << p.getFormacaoProfessor() << ", nível: " << p.getNivelProfessor() << endl
       << "--------------------------------------------------------------------------------" << endl;
       break;
@@ -63,9 +66,10 @@ void execucao() {
       cout << "tecnicos administrativos cadastrados:" << endl << endl;
       cout << "================================================================================" << endl;
       cout
-        << "Nome: " << t.getNome() << ", cpf: " << t.getCpf() << ", data de nascimento: " << t.getDataNascimento() << ", genero: " << t.getGenero() << endl
+        << "Nome: " << t.getNome() << ", CPF: " << t.getCpf() << ", data de nascimento: " << t.getDataNascimento() << ", genero: " << t.getGenero() << endl
         << "Rua: " << t.getEndereco().getRua() << ", endereço: " << t.getEndereco().getNumero() << ", bairro: " << t.getEndereco().getBairro() << ", cidade: " << t.getEndereco().getCidade() << ", CEP: " << t.getEndereco().getCep() << endl
-        << "funcao desempenhada: " << t.getFuncaoDesempenhada() << ", adcional de profutividade: " << t.getAdicionalProdutividade() << endl
+        << "Matrícula: " << t.getMatricula() << ", salário: " << t.getSalario() << ", departamento: " << t.getDepartamento() << ", carga horaria: " << t.getCargaHoraria() << ", data de ingresso: " << t.getDataIngresso() << endl
+        << "Funcao desempenhada: " << t.getFuncaoDesempenhada() << ", adcional de profutividade: " << t.getAdicionalProdutividade() << endl
         << "--------------------------------------------------------------------------------" << endl;
       break;
     default:
