@@ -18,8 +18,33 @@ Professor::Professor(Pessoa pessoa, Funcionario funcionario, int formacaoProfess
   this->setCargaHoraria(funcionario.getCargaHoraria());
   this->setDataIngresso(funcionario.getDataIngresso());
   // atribuição ao professor(a)
-  Professor::setFormacaoProfessor(formacaoProfessor);
-  Professor::setNivelProfessor(nivelProfessor);
+  if (formacaoProfessor == 1) {
+    this->formacaoProfessor = GRADUACAO;
+  } else if (formacaoProfessor == 2) {
+    this->formacaoProfessor = ESPECIALIZACAO;
+  } else if (formacaoProfessor == 3) {
+    this->formacaoProfessor = MESTRADO;
+  } else if (formacaoProfessor == 4) {
+    this->formacaoProfessor = DOUTORADO;
+  }
+
+  if (nivelProfessor == 1) {
+    this->nivelProfessor = I;
+  } else if (nivelProfessor == 2) {
+    this->nivelProfessor = II;
+  } else if (nivelProfessor == 3) {
+    this->nivelProfessor = III;
+  } else if (nivelProfessor == 4) {
+    this->nivelProfessor = IV;
+  } else if (nivelProfessor == 5) {
+    this->nivelProfessor = V;
+  } else if (nivelProfessor == 6) {
+    this->nivelProfessor = VI;
+  } else if (nivelProfessor == 7) {
+    this->nivelProfessor = VII;
+  } else if (nivelProfessor == 8) {
+    this->nivelProfessor = VIII;
+  }
 }
 Professor::Professor() {}
 
