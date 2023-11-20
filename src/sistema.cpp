@@ -48,18 +48,18 @@ void execucao() {
       }
       cout << "Dados do(a) professor(a):" << endl << endl;
       cout << "================================================================================" << endl;
-    cout
-      << "Nome: " << p.getNome() << ", CPF: " << p.getCpf() << ", data de nascimento: " << p.getDataNascimento() << ", genero: " << p.getGenero() << endl
-      << "Rua: " << p.getEndereco().getRua() << ", endereço: " << p.getEndereco().getNumero() << ", bairro: " << p.getEndereco().getBairro() << ", cidade: " << p.getEndereco().getCidade() << ", CEP: " << p.getEndereco().getCep() << endl
-      << "Matrícula: " << p.getMatricula() << ", salário: " << p.getSalario() << ", departamento: " << p.getDepartamento() << ", carga horaria: " << p.getCargaHoraria() << ", data de ingresso: " << p.getDataIngresso() << endl
-      << "Formação: " << p.getFormacaoProfessor() << ", nível: " << p.getNivelProfessor() << endl
-      << "--------------------------------------------------------------------------------" << endl;
+      cout
+        << "Nome: " << p.getNome() << ", CPF: " << p.getCpf() << ", data de nascimento: " << p.getDataNascimento() << ", genero: " << p.getGenero() << endl
+        << "Rua: " << p.getEndereco().getRua() << ", endereço: " << p.getEndereco().getNumero() << ", bairro: " << p.getEndereco().getBairro() << ", cidade: " << p.getEndereco().getCidade() << ", CEP: " << p.getEndereco().getCep() << endl
+        << "Matrícula: " << p.getMatricula() << ", salário: " << p.getSalario() << ", departamento: " << p.getDepartamento() << ", carga horaria: " << p.getCargaHoraria() << ", data de ingresso: " << p.getDataIngresso() << endl
+        << "Formação: " << p.getFormacaoProfessor() << ", nível: " << p.getNivelProfessor() << endl
+        << "--------------------------------------------------------------------------------" << endl;
       break;
     case 8:
       cout << "Informe a matrícula do(a) técnico(a) que deseja buscar: ";
       cin >> matricula;
       t = dados.buscarTecnicoAdm(matricula);
-      if (p.getMatricula() == "invalida") {
+      if (t.getMatricula() == "invalida") {
         cout << "Matrícula inválida!" << endl;
         break;
       }

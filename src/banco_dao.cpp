@@ -81,7 +81,7 @@ Professor BancoDAO::buscarProfessor(string matricula) {
     }
   }
   Professor p;
-  p.setMatricula("Inválida");
+  p.setMatricula("invalida");
   return p;
 }
 
