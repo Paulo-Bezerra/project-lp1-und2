@@ -9,20 +9,21 @@ Endereco formularioCadastrarEndereco() {
   int bufferInt = 0;
   string bufferString = "";
 
-  cout << "\t Rua: " << endl;
-  cin >> bufferString;
+  cout << "\t Rua: ";
+  getline(cin, bufferString);
   e.setRua(bufferString);
-  cout << "\t Número: " << endl;
+  cout << "\t Número: ";
   cin >> bufferInt;
   e.setNumero(bufferInt);
-  cout << "\t Bairro: " << endl;
-  cin >> bufferString;
+  cout << "\t Bairro: ";
+  getline(cin, bufferString);
+  getline(cin, bufferString);
   e.setBairro(bufferString);
-  cout << "\t Cidade: " << endl;
-  cin >> bufferString;
+  cout << "\t Cidade: ";
+  getline(cin, bufferString);
   e.setCidade(bufferString);
-  cout << "\t CEP: " << endl;
-  cin >> bufferString;
+  cout << "\t CEP: ";
+  getline(cin, bufferString);
   e.setCep(bufferString);
 
   return e;
@@ -36,16 +37,17 @@ Pessoa formularioCadastrarPessoa() {
   string bufferString = "";
 
   cout << "\t Nome: ";
-  cin >> bufferString;
+  getline(cin, bufferString);
+  getline(cin, bufferString);
   p.setNome(bufferString);
-  cout << "\t CPF: " << endl;
-  cin >> bufferString;
+  cout << "\t CPF: ";
+  getline(cin, bufferString);
   p.setCpf(bufferString);
-  cout << "\t Data Nascimento: " << endl;
-  cin >> bufferString;
+  cout << "\t Data de nascimento: ";
+  getline(cin, bufferString);
   p.setDataNascimento(bufferString);
-  cout << "\t Genero: " << endl;
-  cin >> bufferString;
+  cout << "\t Gênero: ";
+  getline(cin, bufferString);
   p.setGenero(bufferString);
   e = formularioCadastrarEndereco();
   p.setEndereco(e.getRua(), e.getNumero(), e.getBairro(), e.getCidade(), e.getCep());
@@ -59,20 +61,22 @@ Funcionario formularioCadastrarFuncionario() {
   float bufferFloat = 0.0;
   string bufferString = "";
 
-  cout << "\t Matrícula: " << endl;
-  cin >> bufferString;
+  cout << "\t Matrícula: ";
+  getline(cin, bufferString);
   f.setMatricula(bufferString);
-  cout << "\t Salário: " << endl;
+  cout << "\t Salário: ";
   cin >> bufferFloat;
   f.setSalario(bufferFloat);
-  cout << "\t Departamento: " << endl;
-  cin >> bufferString;
+  cout << "\t Departamento: ";
+  getline(cin, bufferString);
+  getline(cin, bufferString);
   f.setDepartamento(bufferString);
-  cout << "\t Carga horária: " << endl;
+  cout << "\t Carga horária: ";
   cin >> bufferInt;
   f.setCargaHoraria(bufferInt);
-  cout << "\t Data de ingresso: " << endl;
-  cin >> bufferString;
+  cout << "\t Data de ingresso: ";
+  getline(cin, bufferString);
+  getline(cin, bufferString);
   f.setDataIngresso(bufferString);
 
   return f;

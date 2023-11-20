@@ -25,9 +25,16 @@ public:
 
   void deletarTecnicoAdm(std::string matricula);
 
-  int buscarProfessor(std::string matricula);
+  Professor buscarProfessor(std::string matricula);
 
-  int buscarTecnicoADM(std::string matricula);
+  TecnicoAdm buscarTecnicoAdm(std::string matricula);
+
+protected:
+  int indiceProfessor(std::string matricula);
+
+  int indiceTecnicoAdm(std::string matricula);
+
+
 };
 
 
