@@ -3,29 +3,27 @@
 
 using namespace std;
 
-
-
 int menuPrincipal() {
   int opcao;
   cout
-    << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl
-    << "= Sistema de gerenciamento de empregados da empresa IMDCorp =" << endl
-    << "=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=" << endl;
-  cout << "++++++++" << endl << "+ Menu +" << endl << "++++++++" << endl;
-
-  cout
-    << "1. Cadastrar Professor" << endl
-    << "2. Cadastrar Tecnico Administrativo" << endl
-    << "3. Listar Professores" << endl
-    << "4. Listar Tecnico Administrativo" << endl
-    << "5. Deletar Professor" << endl
-    << "6. Deletar Tecnico Administrativo" << endl
-    << "7. Buscar Professor" << endl
-    << "8. Buscar Tecnico Administrativo" << endl
-    << "0. Sair" << endl
-    << "Selecione a opção desejada: ";
+    << "╔═══════════════════════════════════════════════════════════╗" << endl
+    << "║ Sistema de gerenciamento de empregados da empresa IMDCorp ║" << endl
+    << "╠═══════════════════════════════════════════════════════════╣" << endl
+    << "║                           Menu                            ║" << endl
+    << "╠═══════════════════════════════════════════════════════════╣" << endl
+    << "║ 1. Cadastrar professor(a)                                 ║" << endl
+    << "║ 2. Cadastrar técnico(a) administrativo                    ║" << endl
+    << "║ 3. Listar os professores                                  ║" << endl
+    << "║ 4. Listar os técnicos administrativo                      ║" << endl
+    << "║ 5. Deletar professor(a)                                   ║" << endl
+    << "║ 6. Deletar técnico(a) administrativo                      ║" << endl
+    << "║ 7. Buscar professor(a)                                    ║" << endl
+    << "║ 8. Buscar técnico(a) administrativo                       ║" << endl
+    << "║ 0. Sair                                                   ║" << endl
+    << "╠═══════════════════════════════════════════════════════════╝" << endl
+    << "║ Selecione a opção desejada: ";
   cin >> opcao;
-  if (opcao >= 0 || opcao <= 8) return opcao;
+  if (opcao >= 0 && opcao <= 8) return opcao;
 
   return -1;
 }
