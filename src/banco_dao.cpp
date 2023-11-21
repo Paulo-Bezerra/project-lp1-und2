@@ -54,19 +54,33 @@ void BancoDAO::listarTecnicosAdm() {
 
 void BancoDAO::deletarProfessor(string matricula) {
   int posDelete = indiceProfessor(matricula);
-  if (posDelete < 0) {
-    cout << "matrícula não encotrada. operação cancelada!";
+  if (posDelete == -1) {
+    cout
+    << "╠══════════════════════════════════════════════╗" << endl
+    << "║ Matrícula não encotrada. Operação cancelada! ║" << endl
+    << "╚══════════════════════════════════════════════╝" << endl;
   } else {
     professores.erase(professores.begin() + posDelete);
+    cout
+    << "╠═══════════════════════╗" << endl
+    << "║ Excluído com sucesso! ║" << endl
+    << "╚═══════════════════════╝" << endl;
   }
 }
 
 void BancoDAO::deletarTecnicoAdm(string matricula) {
   int posDelete = indiceTecnicoAdm(matricula);
-  if (posDelete < 0) {
-    cout << "matrícula não encotrada. operação cancelada!";
+  if (posDelete == -1) {
+    cout
+    << "╠══════════════════════════════════════════════╗" << endl
+    << "║ Matrícula não encotrada. Operação cancelada! ║" << endl
+    << "╚══════════════════════════════════════════════╝" << endl;
   } else {
     tecnicosAdm.erase(tecnicosAdm.begin() + posDelete);
+    cout
+    << "╠═══════════════════════╗" << endl
+    << "║ Excluído com sucesso! ║" << endl
+    << "╚═══════════════════════╝" << endl;
   }
 }
 
