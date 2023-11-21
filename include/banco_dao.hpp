@@ -29,12 +29,17 @@ public:
 
   TecnicoAdm buscarTecnicoAdm(std::string matricula);
 
+  void carregarBanco();
+
+  void salvarBanco();
+
 protected:
   int indiceProfessor(std::string matricula);
-
   int indiceTecnicoAdm(std::string matricula);
-
-
+  void carregarProfessores();
+  void carregarTecnicos();
+  void salvarProfessores();
+  void salvarTecnicos();
 };
 
 

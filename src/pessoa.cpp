@@ -52,3 +52,11 @@ void Pessoa::setEndereco(string rua, int numero, string bairro, string cidade, s
   this->endereco.setCidade(cidade);
   this->endereco.setCep(cep);
 }
+
+void Pessoa::setEndereco(Endereco endereco) {
+  this->endereco.setRua(endereco.getRua());
+  this->endereco.setNumero(endereco.getNumero());
+  this->endereco.setBairro(endereco.getBairro());
+  this->endereco.setCidade(endereco.getCidade());
+  this->endereco.setCep(endereco.getCep());
+}

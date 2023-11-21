@@ -27,6 +27,7 @@ public:
   void setDataNascimento(std::string dataNascimento);
   void setGenero(std::string genero);
   void setEndereco(std::string rua, int numero, std::string bairro, std::string cidade, std::string cep);
+  void Pessoa::setEndereco(Endereco endereco);
 };
 
 #endif
