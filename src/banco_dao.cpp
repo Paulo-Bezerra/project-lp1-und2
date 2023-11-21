@@ -6,35 +6,49 @@ BancoDAO::BancoDAO() {}
 
 void BancoDAO::cadastrarProfessor(Professor professor) {
   professores.push_back(professor);
+  
+  cout
+    << "╠═════════════════════════════════════════╗" << endl
+    << "║ Professor(a) cadastrado(a) com sucesso! ║" << endl
+    << "╚═════════════════════════════════════════╝" << endl;
 }
 
 void BancoDAO::cadastrarTecnicoAdm(TecnicoAdm tecnicoAdm) {
   tecnicosAdm.push_back(tecnicoAdm);
+  
+  cout
+    << "╠══════════════════════════════════════════════════════╗" << endl
+    << "║ Técnico(a) administrativo cadastrado(a) com sucesso! ║" << endl
+    << "╚══════════════════════════════════════════════════════╝" << endl;
 }
 
 void BancoDAO::listarProfessores() {
-  cout << "professores cadastrados:" << endl << endl;
-  cout << "================================================================================" << endl;
+  cout
+    << "╔═════════════════════════╗" << endl
+    << "║ Professores cadastrados ║" << endl
+    << "╠═════════════════════════╝" << endl;
   for (Professor p : professores) {
     cout
-      << "Nome: " << p.getNome() << ", CPF: " << p.getCpf() << ", data de nascimento: " << p.getDataNascimento() << ", genero: " << p.getGenero() << endl
-      << "Rua: " << p.getEndereco().getRua() << ", endereço: " << p.getEndereco().getNumero() << ", bairro: " << p.getEndereco().getBairro() << ", cidade: " << p.getEndereco().getCidade() << ", CEP: " << p.getEndereco().getCep() << endl
-      << "Matrícula: " << p.getMatricula() << ", salário: " << p.getSalario() << ", departamento: " << p.getDepartamento() << ", carga horaria: " << p.getCargaHoraria() << ", data de ingresso: " << p.getDataIngresso() << endl
-      << "Formação: " << p.getFormacaoProfessor() << ", nível: " << p.getNivelProfessor() << endl
-      << "--------------------------------------------------------------------------------" << endl;
+      << "║ Nome: " << p.getNome() << ", CPF: " << p.getCpf() << ", data de nascimento: " << p.getDataNascimento() << ", genero: " << p.getGenero() << endl
+      << "║ Rua: " << p.getEndereco().getRua() << ", endereço: " << p.getEndereco().getNumero() << ", bairro: " << p.getEndereco().getBairro() << ", cidade: " << p.getEndereco().getCidade() << ", CEP: " << p.getEndereco().getCep() << endl
+      << "║ Matrícula: " << p.getMatricula() << ", salário: " << p.getSalario() << ", departamento: " << p.getDepartamento() << ", carga horaria: " << p.getCargaHoraria() << ", data de ingresso: " << p.getDataIngresso() << endl
+      << "║ Formação: " << p.getFormacaoProfessor() << ", nível: " << p.getNivelProfessor() << endl
+      << "╙――――――――――" << endl;
   }
 }
 
 void BancoDAO::listarTecnicosAdm() {
-  cout << "tecnicos administrativos cadastrados:" << endl << endl;
-  cout << "================================================================================" << endl;
+  cout
+    << "╔═════════════════════════════════════════╗" << endl
+    << "║ Técnicos(as) administrativo cadastrados ║" << endl
+    << "╠═════════════════════════════════════════╝" << endl;
   for (TecnicoAdm t : tecnicosAdm) {
     cout
-      << "Nome: " << t.getNome() << ", CPF: " << t.getCpf() << ", data de nascimento: " << t.getDataNascimento() << ", genero: " << t.getGenero() << endl
-      << "Rua: " << t.getEndereco().getRua() << ", endereço: " << t.getEndereco().getNumero() << ", bairro: " << t.getEndereco().getBairro() << ", cidade: " << t.getEndereco().getCidade() << ", CEP: " << t.getEndereco().getCep() << endl
-      << "Matrícula: " << t.getMatricula() << ", salário: " << t.getSalario() << ", departamento: " << t.getDepartamento() << ", carga horaria: " << t.getCargaHoraria() << ", data de ingresso: " << t.getDataIngresso() << endl
-      << "Funcao desempenhada: " << t.getFuncaoDesempenhada() << ", adcional de profutividade: " << t.getAdicionalProdutividade() << endl
-      << "--------------------------------------------------------------------------------" << endl;
+      << "║ Nome: " << t.getNome() << ", CPF: " << t.getCpf() << ", data de nascimento: " << t.getDataNascimento() << ", genero: " << t.getGenero() << endl
+      << "║ Rua: " << t.getEndereco().getRua() << ", endereço: " << t.getEndereco().getNumero() << ", bairro: " << t.getEndereco().getBairro() << ", cidade: " << t.getEndereco().getCidade() << ", CEP: " << t.getEndereco().getCep() << endl
+      << "║ Matrícula: " << t.getMatricula() << ", salário: " << t.getSalario() << ", departamento: " << t.getDepartamento() << ", carga horaria: " << t.getCargaHoraria() << ", data de ingresso: " << t.getDataIngresso() << endl
+      << "║ Função desempenhada: " << t.getFuncaoDesempenhada() << ", adcional de profutividade: " << t.getAdicionalProdutividade() << endl
+      << "╙――――――――――" << endl;
   }
 }
 
