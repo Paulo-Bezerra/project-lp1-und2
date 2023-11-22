@@ -2,7 +2,10 @@ Recomendações:
 Usar um sistema operacional recente com base linux.
 Usar o bash ou zsh.
 
+Importante:
+Verifique se seu sistema possui o g++ e o suporte a Makefile.
+
 Execução:
-basta executar o seguinte comando na raiz da pasta do projeto:
+Basta executar o seguinte comando na raiz da pasta do projeto:
 
 make run -s
