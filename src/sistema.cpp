@@ -49,7 +49,7 @@ void execucao() {
         << "╠═══════════════════════════════════╝" << endl
         << "║ Informe a matrícula do(a) técnico(a) a ser deletado(a): ";
       cin >> matricula;
-      dados.deletarProfessor(matricula);
+      dados.deletarTecnicoAdm(matricula);
       break;
     case 7:
       cout
@@ -59,7 +59,7 @@ void execucao() {
         << "║ Informe a matrícula do(a) professor(a) que deseja buscar: ";
       cin >> matricula;
       p = dados.buscarProfessor(matricula);
-      if (p.getMatricula() == "invalida") {
+      if (t.getMatricula() == "invalida") {
         cout
           << "╠═════════════════════╗" << endl
           << "║ Matrícula inválida! ║" << endl
