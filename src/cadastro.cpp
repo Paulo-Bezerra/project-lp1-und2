@@ -9,9 +9,9 @@ Professor formularioCadastrarProfessor() {
   int formacaoProfessor, nivelProfessor;
 
   cout
-    << "╔═════════════════════════╗" << endl
-    << "║ Cadatro de professor(a) ║" << endl
-    << "╠═════════════════════════╝" << endl;
+    << "╔════════════════════════╗" << endl
+    << "║ Cadastrar professor(a) ║" << endl
+    << "╠════════════════════════╝" << endl;
   pessoa = formularioCadastrarPessoa();
   funcionario = formularioCadastrarFuncionario();
   cout
@@ -38,9 +38,9 @@ TecnicoAdm formularioCadastrarTecnicoAdm() {
   string funcaoDesempenhada;
 
   cout
-    << "╔══════════════════════════════════════╗" << endl
-    << "║ Cadatro de técnico(a) administrativo ║" << endl
-    << "╠══════════════════════════════════════╝" << endl;
+    << "╔════════════════════════════════════════╗" << endl
+    << "║ Cadastrar de técnico(a) administrativo ║" << endl
+    << "╠════════════════════════════════════════╝" << endl;
   pessoa = formularioCadastrarPessoa();
   funcionario = formularioCadastrarFuncionario();
   cout 

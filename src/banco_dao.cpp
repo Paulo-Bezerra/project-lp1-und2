@@ -7,7 +7,7 @@ using namespace std;
 BancoDAO::BancoDAO() {}
 
 void BancoDAO::cadastrarProfessor(Professor professor) {
-  professores.push_back(professor);
+  this->professores.push_back(professor);
 
   cout
     << "╠═════════════════════════════════════════╗" << endl
@@ -16,7 +16,7 @@ void BancoDAO::cadastrarProfessor(Professor professor) {
 }
 
 void BancoDAO::cadastrarTecnicoAdm(TecnicoAdm tecnicoAdm) {
-  tecnicosAdm.push_back(tecnicoAdm);
+  this->tecnicosAdm.push_back(tecnicoAdm);
 
   cout
     << "╠══════════════════════════════════════════════════════╗" << endl
@@ -29,11 +29,11 @@ void BancoDAO::listarProfessores() {
     << "╔═════════════════════════╗" << endl
     << "║ Professores cadastrados ║" << endl
     << "╠═════════════════════════╝" << endl;
-  for (Professor p : professores) {
+  for (Professor p : this->professores) {
     cout
       << "║ Nome: " << p.getNome() << ", CPF: " << p.getCpf() << ", data de nascimento: " << p.getDataNascimento() << ", genero: " << p.getGenero() << endl
       << "║ Rua: " << p.getEndereco().getRua() << ", endereço: " << p.getEndereco().getNumero() << ", bairro: " << p.getEndereco().getBairro() << ", cidade: " << p.getEndereco().getCidade() << ", CEP: " << p.getEndereco().getCep() << endl
-      << "║ Matrícula: " << p.getMatricula() << ", salário: " << p.getSalario() << ", departamento: " << p.getDepartamento() << ", carga horaria: " << p.getCargaHoraria() << ", data de ingresso: " << p.getDataIngresso() << endl
+      << "║ Matrícula: " << p.getMatricula() << ", salário: R$  " << p.getSalario() << ", departamento: " << p.getDepartamento() << ", carga horaria: " << p.getCargaHoraria() << ", data de ingresso: " << p.getDataIngresso() << endl
       << "║ Formação: " << p.getFormacaoProfessor() << ", nível: " << p.getNivelProfessor() << endl
       << "╙――――――――――" << endl;
   }
@@ -44,11 +44,11 @@ void BancoDAO::listarTecnicosAdm() {
     << "╔═════════════════════════════════════════╗" << endl
     << "║ Técnicos(as) administrativo cadastrados ║" << endl
     << "╠═════════════════════════════════════════╝" << endl;
-  for (TecnicoAdm t : tecnicosAdm) {
+  for (TecnicoAdm t : this->tecnicosAdm) {
     cout
       << "║ Nome: " << t.getNome() << ", CPF: " << t.getCpf() << ", data de nascimento: " << t.getDataNascimento() << ", genero: " << t.getGenero() << endl
       << "║ Rua: " << t.getEndereco().getRua() << ", endereço: " << t.getEndereco().getNumero() << ", bairro: " << t.getEndereco().getBairro() << ", cidade: " << t.getEndereco().getCidade() << ", CEP: " << t.getEndereco().getCep() << endl
-      << "║ Matrícula: " << t.getMatricula() << ", salário: " << t.getSalario() << ", departamento: " << t.getDepartamento() << ", carga horaria: " << t.getCargaHoraria() << ", data de ingresso: " << t.getDataIngresso() << endl
+      << "║ Matrícula: " << t.getMatricula() << ", salário: R$  " << t.getSalario() << ", departamento: " << t.getDepartamento() << ", carga horaria: " << t.getCargaHoraria() << ", data de ingresso: " << t.getDataIngresso() << endl
       << "║ Função desempenhada: " << t.getFuncaoDesempenhada() << ", adcional de profutividade: " << t.getAdicionalProdutividade() << endl
       << "╙――――――――――" << endl;
   }
@@ -62,7 +62,7 @@ void BancoDAO::deletarProfessor(string matricula) {
       << "║ Matrícula não encotrada. Operação cancelada! ║" << endl
       << "╚══════════════════════════════════════════════╝" << endl;
   } else {
-    professores.erase(professores.begin() + posDelete);
+    this->professores.erase(this->professores.begin() + posDelete);
     cout
       << "╠═══════════════════════╗" << endl
       << "║ Excluído com sucesso! ║" << endl
@@ -78,7 +78,7 @@ void BancoDAO::deletarTecnicoAdm(string matricula) {
       << "║ Matrícula não encotrada. Operação cancelada! ║" << endl
       << "╚══════════════════════════════════════════════╝" << endl;
   } else {
-    tecnicosAdm.erase(tecnicosAdm.begin() + posDelete);
+    this->tecnicosAdm.erase(this->tecnicosAdm.begin() + posDelete);
     cout
       << "╠═══════════════════════╗" << endl
       << "║ Excluído com sucesso! ║" << endl
@@ -87,8 +87,8 @@ void BancoDAO::deletarTecnicoAdm(string matricula) {
 }
 
 int BancoDAO::indiceProfessor(string matricula) {
-  for (int i = 0; i < professores.size(); i++) {
-    if (professores[i].getMatricula() == matricula) {
+  for (int i = 0; i < this->professores.size(); i++) {
+    if (this->professores[i].getMatricula() == matricula) {
       return i;
     }
   }
@@ -96,8 +96,8 @@ int BancoDAO::indiceProfessor(string matricula) {
 }
 
 int BancoDAO::indiceTecnicoAdm(string matricula) {
-  for (int i = 0; i < tecnicosAdm.size(); i++) {
-    if (tecnicosAdm[i].getMatricula() == matricula) {
+  for (int i = 0; i < this->tecnicosAdm.size(); i++) {
+    if (this->tecnicosAdm[i].getMatricula() == matricula) {
       return i;
     }
   }
@@ -105,9 +105,9 @@ int BancoDAO::indiceTecnicoAdm(string matricula) {
 }
 
 Professor BancoDAO::buscarProfessor(string matricula) {
-  for (int i = 0; i < professores.size(); i++) {
-    if (professores[i].getMatricula() == matricula) {
-      return professores[i];
+  for (int i = 0; i < this->professores.size(); i++) {
+    if (this->professores[i].getMatricula() == matricula) {
+      return this->professores[i];
     }
   }
   Professor p;
@@ -117,9 +117,9 @@ Professor BancoDAO::buscarProfessor(string matricula) {
 
 
 TecnicoAdm BancoDAO::buscarTecnicoAdm(string matricula) {
-  for (int i = 0; i < tecnicosAdm.size(); i++) {
-    if (tecnicosAdm[i].getMatricula() == matricula) {
-      return tecnicosAdm[i];
+  for (int i = 0; i < this->tecnicosAdm.size(); i++) {
+    if (this->tecnicosAdm[i].getMatricula() == matricula) {
+      return this->tecnicosAdm[i];
     }
   }
   TecnicoAdm t;
@@ -176,7 +176,7 @@ void BancoDAO::carregarProfessores() {
     p.setFormacaoProfessor(stoi(buffer));
     getline(arq_prof, buffer);
     p.setNivelProfessor(stoi(buffer));
-    professores.push_back(p);
+    this->professores.push_back(p);
   }
   arq_prof.close();
 }
@@ -222,7 +222,7 @@ void BancoDAO::carregarTecnicos() {
 
     getline(arq_tecn, buffer);
     t.setFuncaoDesempenhada(buffer);
-    tecnicosAdm.push_back(t);
+    this->tecnicosAdm.push_back(t);
   }
   arq_tecn.close();
 }
@@ -236,7 +236,7 @@ void BancoDAO::salvarProfessores() {
   fstream arq_prof;
   string path = "db/professores.txt";
   arq_prof.open(path, ios::out);
-  for (Professor p : professores) {
+  for (Professor p : this->professores) {
     arq_prof
       << p.getNome() << endl
       << p.getCpf() << endl
@@ -260,9 +260,9 @@ void BancoDAO::salvarProfessores() {
 
 void BancoDAO::salvarTecnicos() {
   fstream arq_tecn;
-  string path = "db/professores.txt";
+  string path = "db/tecnicos_adm.txt";
   arq_tecn.open(path, ios::out);
-  for (TecnicoAdm t : tecnicosAdm) {
+  for (TecnicoAdm t : this->tecnicosAdm) {
     arq_tecn
       << t.getNome() << endl
       << t.getCpf() << endl
