@@ -3,6 +3,7 @@
 
 using namespace std;
 
+// exibe o menu com as opções do sistema e retorna a opção (o inteiro) selecionado
 int menuPrincipal() {
   int opcao;
   cout
@@ -23,6 +24,7 @@ int menuPrincipal() {
     << "╠═══════════════════════════════════════════════════════════╝" << endl
     << "║ Selecione a opção desejada: ";
   cin >> opcao;
+  // verifica se opção passada é válida
   if (opcao >= 0 && opcao <= 8) return opcao;
 
   return -1;

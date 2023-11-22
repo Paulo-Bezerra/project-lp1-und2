@@ -2,6 +2,7 @@
 
 using namespace std;
 
+// construtores da classe TecnicoAdm
 TecnicoAdm::TecnicoAdm(Pessoa pessoa, Funcionario funcionario, std::string funcaoDesempenhada) {
   // herança de pessoa
   this->setNome(pessoa.getNome());
@@ -20,19 +21,24 @@ TecnicoAdm::TecnicoAdm(Pessoa pessoa, Funcionario funcionario, std::string funca
   // atribuição ao tecnico(a) administrativo
   this->funcaoDesempenhada = funcaoDesempenhada;
 }
-
 TecnicoAdm::TecnicoAdm(){}
 
+// retorna o adcional de produtividade
 float TecnicoAdm::getAdicionalProdutividade() {
   return this->adicionalProdutividade;
 }
+
+// retorna o adcional de produtividade
 std::string TecnicoAdm::getFuncaoDesempenhada() {
   return this->funcaoDesempenhada;
 }
 
+// modifica o adiconal de produtividade de acordo com o float passado
 void TecnicoAdm::setAdicionalProdutividade(float adicionalProdutividade) {
   this->adicionalProdutividade = adicionalProdutividade;
 }
+
+// modifica a função desempenhada de acordo com a string passada
 void TecnicoAdm::setFuncaoDesempenhada(string funcaoDesempenhada) {
   this->funcaoDesempenhada = funcaoDesempenhada;
 }

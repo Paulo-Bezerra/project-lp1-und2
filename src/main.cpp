@@ -1,9 +1,7 @@
-#include <iostream>
 #include "../include/sistema.hpp"
 
-using namespace std;
-
 int main() {
+  // chamada da função que controla o fluxo da aplicação
   execucao();
   return 0;
 }

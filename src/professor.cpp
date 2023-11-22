@@ -1,7 +1,6 @@
 #include "../include/professor.hpp"
 
-using namespace std;
-
+// construtores da classe Professor
 Professor::Professor(Pessoa pessoa, Funcionario funcionario, int formacaoProfessor, int nivelProfessor) {
   // herança de pessoa
   this->setNome(pessoa.getNome());
@@ -17,7 +16,9 @@ Professor::Professor(Pessoa pessoa, Funcionario funcionario, int formacaoProfess
   this->setDepartamento(funcionario.getDepartamento());
   this->setCargaHoraria(funcionario.getCargaHoraria());
   this->setDataIngresso(funcionario.getDataIngresso());
+  
   // atribuição ao professor(a)
+  // realixando a conversão para enum Formacao
   if (formacaoProfessor == 1) {
     this->formacaoProfessor = GRADUACAO;
   } else if (formacaoProfessor == 2) {
@@ -28,6 +29,7 @@ Professor::Professor(Pessoa pessoa, Funcionario funcionario, int formacaoProfess
     this->formacaoProfessor = DOUTORADO;
   }
 
+  // realixando a conversão para enum Formacao
   if (nivelProfessor == 1) {
     this->nivelProfessor = I;
   } else if (nivelProfessor == 2) {
@@ -48,14 +50,19 @@ Professor::Professor(Pessoa pessoa, Funcionario funcionario, int formacaoProfess
 }
 Professor::Professor() {}
 
+// retorna o inteiro correspondente à formação do professor
 int Professor::getFormacaoProfessor() {
   return this->formacaoProfessor;
 }
+
+// retorna o inteiro correspondente ao nível do professor
 int Professor::getNivelProfessor() {
   return this->nivelProfessor;
 }
 
+// retorna o inteiro correspondente ao nível do professor
 void Professor::setFormacaoProfessor(int formacaoProfessor) {
+  // realixando a conversão para enum Formacao
   if (formacaoProfessor == 1) {
     this->formacaoProfessor = GRADUACAO;
   } else if (formacaoProfessor == 2) {
@@ -66,7 +73,10 @@ void Professor::setFormacaoProfessor(int formacaoProfessor) {
     this->formacaoProfessor = DOUTORADO;
   }
 }
+
+// modifica o nível do professor de acordo com o inteiro passado
 void Professor::setNivelProfessor(int nivelProfessor) {
+  // realixando a conversão para enum Nivel
   if (nivelProfessor == 1) {
     this->nivelProfessor = I;
   } else if (nivelProfessor == 2) {
